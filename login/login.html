@@ -1,0 +1,36 @@
+
+
+
+    <section class="center" name="login"   ng-controller="LoginController as vm">
+        <button id="ENG" class="fade-in one" ng-if="vm.menuClickedLog" ng-click="vm.changeToEnglish()">ENG</button><button id="BUL" class="fade-in one" ng-if="vm.menuClickedLog" ng-click="vm.changeToBulgarian()">BUL</button>
+        <!--<h2>  {{'home'|searchFor}}</h2>&lt;!&ndash;ng-repeat="word in vm.engJson |searchFor:'home'"&ndash;&gt;-->
+        <!--<h2 id="loginText">{{vm.loginText}}</h2>-->
+        <h2 id="loginText" class="fade-in three">{{'loginText' | searchFor}}</h2>
+        <form id="loginForm" class="fade-in one">
+            <div id="user" class="fade-in two">
+                <!--<label id="usernameText" for="username">Username</label>-->
+                <!--<input type="text" name="username" id="username" class="w3-input w3-border" placeholder="{{vm.inputUsernamePlaceholder}}" ng-model="vm.username" autofocus />-->
+                <input type="text" name="username" id="username" class="w3-input w3-border" placeholder="{{'inputUsernamePlaceholder' | searchFor}}" ng-model="vm.username" autofocus />
+                <div ng-if="vm.isUserEmpty" class="arrow-up-user"></div>
+                <!--<span id="requiredUsernameSpan" ng-if="vm.isUserEmpty">{{vm.spanRequired}}</span>-->
+                <span id="requiredUsernameSpan" ng-if="vm.isUserEmpty">{{'spanRequired'| searchFor}}</span>
+            </div>
+            <div id="passwordDiv" class="fade-in two">
+                <!--<label id="passwordText" for="pass">Password</label>-->
+                <!--<input type="password" name="pass" id="pass" class="w3-input w3-border" placeholder="{{vm.inputPassPlaceholder}}" ng-model="vm.pass"  />-->
+                <input type="password" name="pass" id="pass" class="w3-input w3-border" placeholder="{{'inputPassPlaceholder' | searchFor}}" ng-model="vm.pass"  />
+                <div ng-if="vm.isPassEmpty" class="arrow-up-pass"></div>
+                <!--<span id="requiredPassSpan" ng-if="vm.isPassEmpty">{{vm.spanRequired}}</span>-->
+                <span id="requiredPassSpan" ng-if="vm.isPassEmpty">{{'spanRequired' | searchFor}}</span>
+            </div>
+
+
+
+
+            <!--<button id="submitButton" type="submit"  ng-click="vm.submit()" >{{vm.loginText}}</button>-->
+            <button id="submitButton" type="submit"  ng-click="vm.submit()" >{{'loginText' | searchFor}}</button>
+
+        </form>
+        </section>
+
+

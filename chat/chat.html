@@ -1,0 +1,50 @@
+
+<section  ng-controller="ChatController as vm" enter-directive="vm.clickButton()" >
+
+    <!--<button id="ENG" ng-click="vm.changeToENG()">ENG</button><button id="BUL" ng-click="vm.changeToBUL()">BUL</button>-->
+    <button id="ENG" class="fade-in one" ng-if="vm.menuClickedLog" ng-click="vm.changeToEnglish()">ENG</button><button id="BUL" class="fade-in one" ng-if="vm.menuClickedLog" ng-click="vm.changeToBulgarian()">BUL</button>
+    <ul id="menuList">
+        <li id="homeLi">
+            <img id="homeButton" class="fade-in one" ng-if="vm.menuClickedLog" src="../Assets/home.svg" ng-click="vm.clickHome()"/>
+            <!--<h2 id="homeSign">{{vm.home}}</h2>-->
+            <h2 id="homeSign" class="fade-in one" ng-if="vm.menuClickedLog">{{'home' | searchFor}}</h2>
+        </li>
+        <li id="profileLi">
+            <img id="profileButton" class="fade-in one" ng-if="vm.menuClickedLog" src="../Assets/profile.svg" />
+            <h2 id="profileSign" class="fade-in one" ng-if="vm.menuClickedLog">{{'profile' | searchFor}}</h2>
+        </li>
+    </ul>
+
+    <!--<button id="homeButton" class="w3-btn w3-white w3-border w3-border-blue w3-round" ng-click="vm.clickHome()">Home</button>-->
+    <div id="avatarsBox" >
+        <!--<h3 id="usersText">{{vm.usersText}}</h3>-->
+        <h3 id="usersText">{{'usersText' | searchFor}}</h3>
+        <!--<input id="searchInUsers" ng-model="vm.searchInput" placeholder="{{vm.searchInUsers}}"/>-->
+        <input id="searchInUsers" ng-model="vm.searchInput" placeholder="{{'searchInUsers' | searchFor}}"/>
+        <!--<div id="avatar" ng-avatar  initials="{{vm.userInitial}}"></div>-->
+        <div id="listOfUsers"></div>
+        <ul id="userlist"><div class="floatleft"><li id="userListItem"  ng-repeat="userr in vm.usersList | filter:vm.searchInput" >
+                <!--<multi-avatar-->
+                        <!--data-facebook-id='24353623'-->
+                <!--&gt;</multi-avatar>-->
+            <img id="imgAvatar" src="../Assets/anonymous.png"/>
+                {{userr}}<img id="typingIcon" ng-show="vm.whoIsTyping.indexOf(userr) > -1" src="../Assets/5.Filled_128px_Typing_Chat-128.png"/>
+            </li>
+            </div>
+        </ul>
+    </div>
+    <!--<input id="chatInput" backspace-directive="vm.deletedText()" class="w3-input w3-border" placeholder="{{vm.chatInputPlaceholder}}" ng-change="vm.textChange()" ng-model="vm.something" autofocus/>-->
+    <input id="chatInput" backspace-directive="vm.deletedText()" class="w3-input w3-border" placeholder="{{'chatInputPlaceholder' | searchFor}}" ng-change="vm.textChange()" ng-model="vm.something" autofocus/>
+    <!--<button id="chatButton" class="w3-btn w3-large"  ng-click="vm.clickButton()">{{vm.sendButton}}</button>-->
+    <button id="chatButton" class="w3-btn w3-large"  ng-click="vm.clickButton()">{{'sendButton' | searchFor}}</button>
+    <div class="center" id="chatContainer" scroll-directive >
+        <ul id="messages" >
+            <li id="lito" class="fade-in one" ng-repeat="message in vm.messages track by $index" >
+                {{message}}
+            </li>
+        </ul>
+</div>
+</section>
+
+
+
