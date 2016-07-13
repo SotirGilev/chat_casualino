@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" type="text/css" href="./login/style.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="node_modules/angular-avatar/dist/angular-avatar.js"></script>
+    <script src="/node_modules/angular-multi-avatar/src/md5.js"></script>
+    <script src="/node_modules/angular-multi-avatar/src/multi-avatar-directive.js"></script>
+    <script src="node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+
+
+</head>
+<body id="mainBody" >
+
+<section  ng-controller="MenuController as vm">
+    <!--<div class="menuContainer" id="menuContainer">-->
+
+    <button class="menuBut" ng-class="{moveLeft:!vm.menuClicked,moveRight:vm.menuClicked}" id="menuShowButton" href="#slide-menu-bar" ng-click="vm.menuClickedFunc()"  ><img id="menuButImg" src="Assets/menu-alt-64.png"/></button>
+        <div class="slide-menu" id="slide-menu-bar" ng-class="{hide:!vm.menuClicked,slide:vm.menuClicked}"><!--ng-if="vm.menuClicked" --> <!--ng-class='{ show: visible, left: alignment === left, right: alignment === right }' ng-transclude>-->
+
+            <!--<ul ng-if="!vm.menuClicked">-->
+                <!---->
+                <!--<li><a href="#">Home</a></li>-->
+                <!--<li><a href="#">About</a></li>-->
+                <!--<li><a href="#">Blog</a></li>-->
+                <!--<li><a href="#">Work</a></li>-->
+                <!--<li><a href="#">Contact</a></li>-->
+            <!--</ul>-->
+
+        </div>
+
+
+    <!--</div>-->
+
+</section>
+
+<div id="mainClass" class="w3-container"   >
+     <!--ng-app="myApp">-->
+    <div ng-view></div>
+</div>
+<script src="build/bundle11.js"></script>
+<!--<script src="./app/index.js"></script>
+<script src="./login/LoginCtrl.js"></script>
+<script src="./chat/ChatCtrl.js"></script>
+<script src="./login/LoginService.js"></script>
+<script src="./chat/ChatSocketService.js"></script>
+<script src="./login/LoginSocketService.js"></script>
+<script src="./chat/ChatConfig.js"></script>
+<script src="./login/LoginConfig.js"></script>
+<script src="./chat/ChatRun.js"></script>
+<script src="./chat/ChatEnterDirective.js"></script>
+<script src="./chat/ChatBackspaceDirective.js"></script>
+<script src="./app/AngularStorageService.js"></script>
+<script src="./app/APIInterceptorService.js"></script>
+<script src="./app/LocalizationService.js"></script>
+<script src="./app/LoadService.js"></script>
+<script src="./app/LocalizationFilter.js"></script>-->
+
+</body>
+
+
+</html>

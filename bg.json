@@ -1,0 +1,12 @@
+{
+  "loginText" : "ВХОД",
+  "inputUsernamePlaceholder" : "Потребителско име",
+  "inputPassPlaceholder" : "Парола",
+  "spanRequired" : "Това поле е задължително!",
+  "home" : "Начало",
+  "usersText" : "Потребители",
+  "searchInUsers" : "Търси в потребители..",
+  "chatInputPlaceholder" : "Напиши нещо..",
+  "sendButton" : "Прати",
+  "profile" : "Профил"
+}

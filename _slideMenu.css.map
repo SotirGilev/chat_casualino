@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe;EACb,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO",
+"sources": ["slideMenu.sass"],
+"names": [],
+"file": "slideMenu.css"
+}

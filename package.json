@@ -1,0 +1,22 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "http": "*",
+    "socket.io": "*",
+    "body-parser": "*"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2"
+  }
+}

@@ -1,0 +1,114 @@
+
+
+
+
+@mixin height($height)
+  height : $height
+
+
+
+
+
+
+
+
+
+#slide-menu-bar
+  //@extend #menuContainer
+  box-sizing: border-box
+  background-color: #2e6da4
+  color: #2aabd2
+  position: relative
+  padding-top: 0%
+  top: 0%
+  left:  0%
+
+  @include height(905px)
+  //height: 100%
+  width: 0%
+  -webkit-transition: 1s
+  -moz-transition: 1s
+  -ms-transition: 1s
+  -o-transition: 1s
+  transition: 1s
+
+//@extend #slide-menu-bar
+//@include height(20px)
+////height: auto
+//width: 10%
+  //right: 0%
+#menuList
+  //list-style-type: none
+  list-style-position: inside
+  position: fixed
+  left: 2%
+  top: 11%
+  height: 50%
+  width: 8%
+  z-index: -2
+  border: dashed
+  background-color: #5cb85c
+#menuList li
+  display: inline
+  position: absolute
+  border-bottom: dashed
+  width: 10%
+  height: 10%
+#menuShowButton
+  position: absolute
+  left: 0%
+  width: 55px
+  height: 55px
+  box-sizing: border-box
+  border-radius: 5px
+  background-color: white
+
+#menuShowButton.moveLeft
+  left: 10%
+#menuShowButton.moveRight
+  left: 0%
+.moveRight,.moveLeft
+  transition: all 1s ease
+#menuButImg
+  height: 80%
+  width: 80%
+#slide-menu-bar.slide
+  left: 0%
+  padding-top: 0%
+#slide-menu-bar.hide
+  position: relative
+  top: 0%
+  left:  0%
+  padding-top: 0%
+  //left: 50%
+  //top: 0
+  width: 10%
+//#mainClass.slide
+//  position: relative
+.slide,.hide
+  transition: all 0.2s ease
+
+
+//#slide-menu-bar:active
+//  transition: visibility 0s linear, opacity 0.4s linear
+//  -webkit-transition: visibility 0s linear, opacity 0.4s linear
+//  opacity: 1
+//  visibility: visible
+  //&.menuBut
+    //right: 20%
+
+//#menuContainer
+//  box-sizing: border-box
+//  background-color: #2e6da4
+//  color: #2aabd2
+//  position: absolute
+//  top: 0%
+//  left:  0%
+//
+//  @include height(880px)
+//  //height: auto
+//  width: 10%
+
+//#slide-menu-bar:target
+//  background-color: red
+

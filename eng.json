@@ -1,0 +1,15 @@
+{
+  "loginText" : "LOGIN",
+  "inputUsernamePlaceholder" : "Username",
+  "inputPassPlaceholder" : "Password",
+  "spanRequired" : "This field is required!",
+  "home" : "Home",
+  "usersText" : "Users",
+  "searchInUsers" : "Search in users..",
+  "chatInputPlaceholder" : "Write something..",
+  "sendButton" : "Send",
+  "profile" : "Profile"
+}
+
+
+
